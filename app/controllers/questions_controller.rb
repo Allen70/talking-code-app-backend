@@ -1,5 +1,7 @@
 class QuestionsController < ApplicationController
 
+    before_action :find_question, only: [:show, :update, :destroy]
+
     def index 
         @questions = Question.all 
 
@@ -7,9 +9,13 @@ class QuestionsController < ApplicationController
     end
 
     def show 
-        @question = Question.find(params[:id])
-
         render json: {question: @question}
+    end
+
+    private
+
+    def find_question
+        @question = Question.find(params[:id])       
     end
     
 end
