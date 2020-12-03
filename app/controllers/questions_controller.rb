@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
     def show 
         @question = Question.find(params[:id])
 
-        render json: {question: @question}
+        render json: {question: @question}, include: [:answer]
     end
     
 end
