@@ -102,6 +102,9 @@ question31 = Question.create({ text: "What is CORS?" })
 question32 = Question.create({ text: "What's the semantic difference between PUT and PATCH?" })
 question33 = Question.create({ text: "What is DRY?" })
 
+allen = User.create({ name: "Allen"})
+gerald = User.create({ name: "Gerald"})
+
 ResponseRecord.create({ question: question1, response: response1 })
 ResponseRecord.create({ question: question2, response: response2 })
 ResponseRecord.create({ question: question3, response: response3 })
@@ -135,3 +138,5 @@ ResponseRecord.create({ question: question30, response: response30 })
 ResponseRecord.create({ question: question31, response: response31 })
 ResponseRecord.create({ question: question32, response: response32 })
 ResponseRecord.create({ question: question33, response: response33 })
+
+ResponseRecord.create({ question: question20, response: 'user_answer', user: "user_name" })
