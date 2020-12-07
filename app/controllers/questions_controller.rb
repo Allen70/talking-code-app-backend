@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
     end
 
     def show 
-        render json: {question: @question}
+        render json: {question: @question}, include: [:responses]
     end
 
     private
