@@ -1,6 +1,6 @@
 class ResponsesController < ApplicationController
         
-    before_action :find_response, only: [:show]
+    before_action :find_response, only: [:show, :update, :destroy]
     
     def index 
         @responses = Response.all 
@@ -14,9 +14,22 @@ class ResponsesController < ApplicationController
 
     def create
         @response = Response.create({
-            text: params[:text]
+            text: params[:text],
+            question_id: params[:question_id]
         })
         render json: {response: @response}
+    end
+
+    def update
+        @book.update({
+            text: params[:text]
+        })
+        render json: @book
+    end
+
+    def destroy 
+        @response.destroy
+        render status: 204
     end
 
     private
