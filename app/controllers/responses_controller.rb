@@ -21,10 +21,11 @@ class ResponsesController < ApplicationController
     end
 
     def update
-        @book.update({
-            text: params[:text]
+        @response.update({
+            text: params[:text],
+            question_id: params[:question_id]
         })
-        render json: @book
+        render json: {response: @response}
     end
 
     def destroy 
