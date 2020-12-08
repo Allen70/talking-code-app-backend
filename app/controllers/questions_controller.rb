@@ -12,6 +12,13 @@ class QuestionsController < ApplicationController
         render json: {question: @question}, include: [:responses]
     end
 
+    def create
+        @question = Question.create({
+            text: params[:text]
+        })
+        render json: {question: @question}
+    end
+
     private
 
     def find_question
