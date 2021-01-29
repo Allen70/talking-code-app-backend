@@ -53,11 +53,6 @@ Alt-H Guide
 
   Current status:  Functional MVP completed
   
-  * Something done
-  * Something done
-  * something to get done
-  * Something to get done
-  
 ## Contact
   Talking Code App was created by Allen Lea and [Gerald Bivens](https://www.linkedin.com/in/gerald-bivens/).
 
